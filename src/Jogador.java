@@ -1,5 +1,3 @@
-package Modelos;
-
 public class Jogador {
     public String nome;
 
