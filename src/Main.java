@@ -18,7 +18,7 @@ public class Main {
             jogadores.add(Builder.build_jogador(nome, cor));
         }
 
-        Jogo jogo = new Jogo();
-        jogo.iniciarjogo(jogadores);
-    }
+        Jogo jogo = Builder.build_jogo(jogadores);
+        jogo.iniciarjogo();
+        }
 }

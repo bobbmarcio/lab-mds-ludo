@@ -8,6 +8,6 @@ public class Builder {
     }
 
     public static Jogo build_jogo(List<Jogador> jogadores){
-        return new Jogo();
+        return new Jogo(jogadores);
     }
 }
