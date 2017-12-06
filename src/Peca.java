@@ -12,7 +12,7 @@ public class Peca {
     }
 
     public void mover(int posicoes){
-
+        this.posicao = posicao + posicoes;
     }
 
     public void comer(){
