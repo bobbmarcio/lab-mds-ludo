@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="lab-mds-ludo:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/lab_mds_ludo_jar</output-path>
+    <root id="archive" name="lab-mds-ludo.jar">
+      <element id="module-output" name="lab-mds-ludo" />
+    </root>
+  </artifact>
+</component>
