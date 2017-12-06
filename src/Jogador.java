@@ -1,10 +1,17 @@
+package ludo;
+
+
+import ludo.Dado;
+
+
 public class Jogador {
+
     public String nome;
     public Dado dado = new Dado();
     public Peca peca = new Peca();
     public int situacao = 0; //0 = base; 1 = fora da base;
 
-    public Jogador() {
+    public Jogador(String nome, Peca peca) {
         this.nome = nome;
         this.peca = peca;
     }
@@ -14,7 +21,7 @@ public class Jogador {
     }
 
     public void jogarDado(){
-        dado.setLado();
+        System.out.println("O valor do dado é: "+ dado.setLado());
         validaSaida();
 
         if (situacao == 1 && dado.getLado() == 6){
