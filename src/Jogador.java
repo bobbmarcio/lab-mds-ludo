@@ -1,10 +1,11 @@
 public class Jogador {
-    public String nome;
-    public Dado dado = new Dado();
-    public Peca peca = new Peca();
-    public int situacao = 0; //0 = base; 1 = fora da base;
 
-    public Jogador() {
+    private String nome;
+    private Peca peca;
+    private Jogador() {
+    }
+
+    public Jogador(String nome, Peca peca) {
         this.nome = nome;
         this.peca = peca;
     }
@@ -13,29 +14,31 @@ public class Jogador {
         return nome;
     }
 
-    public void jogarDado(){
-        dado.setLado();
-        validaSaida();
+    public void jogarDado(int quantidadeCasas) {
+        validaSaida(quantidadeCasas);
 
-        if (situacao == 1 && dado.getLado() == 6){
-            jogarDado();
+        if (peca.posicao == 1 && quantidadeCasas == 6) {
+            jogarDado(quantidadeCasas);
         }
     }
 
-    public void moverPeca(){
-        peca.mover(dado.getLado());
+    public void moverPeca(int quantidadeCasas) {
+        peca.mover(quantidadeCasas);
+
+        jogarDado(quantidadeCasas);
     }
 
-    public void validaSaida(){
-        if (peca.posicao == 0){
-            if (dado.getLado() == 6){
-                situacao = 1;
-                moverPeca();
-            }else{
+    public void validaSaida(int quantidadeCasas) {
+        peca.posicao = 55;
+        if (peca.posicao == 0) {
+            if (quantidadeCasas == 6) {
+                peca.posicao = 1;
+                moverPeca(quantidadeCasas);
+            } else {
                 System.out.println("O jogador não saiu da base");
             }
-        }else{
-            moverPeca();
+        } else {
+            moverPeca(quantidadeCasas);
         }
     }
 

@@ -2,7 +2,7 @@ public class Peca {
     public String cor;
     public int posicao;
 
-    public Peca() {
+    public Peca(String cor, int posicao) {
         this.cor = cor;
         this.posicao = posicao;
     }
@@ -10,6 +10,8 @@ public class Peca {
     public String getCor() {
         return cor;
     }
+
+
 
     public void mover(int posicoes){
         System.out.println("O jogador andou "+posicoes+" casas");
@@ -22,6 +24,5 @@ public class Peca {
     }
 
     public void formarTorre(){
-
     }
 }
