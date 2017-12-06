@@ -14,5 +14,6 @@ public class Dado {
         int max = 6;
         int lado = (int )(Math.random() * max + min);
         this.lado = lado;
+        System.out.println("O lado do dado é: "+getLado());
     }
 }
