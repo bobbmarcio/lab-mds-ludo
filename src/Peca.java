@@ -1,6 +1,8 @@
 public class Peca {
     public String cor;
     public int posicao;
+    public boolean fora;
+    public boolean ceu;
 
     public Peca(String cor, int posicao) {
         this.cor = cor;
@@ -10,7 +12,6 @@ public class Peca {
     public String getCor() {
         return cor;
     }
-
 
 
     public void mover(int posicoes){
@@ -25,4 +26,26 @@ public class Peca {
 
     public void formarTorre(){
     }
+    
+    public int getPosicao() {
+        return posicao;
+    }
+
+    public boolean isFora() {
+        return fora;
+    }
+
+    public boolean isCeu() {
+        return ceu;
+    }
+
+    public void setFora(boolean fora) {
+        this.fora = fora;
+    }
+
+    public void setCeu(boolean ceu) {
+        this.ceu = ceu;
+    }
+    
+    
 }
