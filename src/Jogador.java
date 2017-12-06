@@ -14,6 +14,10 @@ public class Jogador {
         return nome;
     }
 
+    public Peca getPeca() {
+        return peca;
+    }
+
     public void jogarDado(int quantidadeCasas) {
         validaSaida(quantidadeCasas);
 
@@ -24,15 +28,12 @@ public class Jogador {
 
     public void moverPeca(int quantidadeCasas) {
         peca.mover(quantidadeCasas);
-
-        jogarDado(quantidadeCasas);
-    }
+        }
 
     public void validaSaida(int quantidadeCasas) {
-        peca.posicao = 55;
-        if (peca.posicao == 0) {
+        if (peca.situacao == Util.DENTRO_DA_BASE) {
             if (quantidadeCasas == 6) {
-                peca.posicao = 1;
+                peca.situacao = Util.FORA_DA_BASE;
                 moverPeca(quantidadeCasas);
             } else {
                 System.out.println("O jogador não saiu da base");

@@ -1,6 +1,7 @@
 public class Peca {
     public String cor;
     public int posicao;
+    public int situacao;
     public boolean fora;
     public boolean ceu;
 
