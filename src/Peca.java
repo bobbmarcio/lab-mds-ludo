@@ -16,9 +16,11 @@ public class Peca {
 
 
     public void mover(int posicoes){
-        System.out.println("O jogador andou "+posicoes+" casas");
-        this.posicao = posicao + posicoes;
-        System.out.println("A posição do jogador é: "+posicao);
+        for (int i = 0; i < posicoes; i++) {
+            System.out.println("O jogador andou " + (i+1) + " casas");
+            this.posicao = posicao + 1;
+            System.out.println("A posição do jogador é: " + posicao);
+        }
     }
 
     public void comer(){
