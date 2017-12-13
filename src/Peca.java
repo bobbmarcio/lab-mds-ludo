@@ -1,9 +1,9 @@
 public class Peca {
-    public String cor;
-    public int posicao;
-    public int situacao;
-    public boolean fora;
-    public boolean ceu;
+    private String cor;
+    private int posicao;
+    private int situacao;
+    private boolean fora;
+    private boolean ceu;
 
     public Peca(String cor, int posicao) {
         this.cor = cor;
@@ -15,23 +15,24 @@ public class Peca {
     }
 
 
-    public void mover(int posicoes){
-        for (int i = 0; i < posicoes; i++) {
-            System.out.println("O jogador andou " + (i+1) + " casas");
-            this.posicao = posicao + 1;
-            System.out.println("A posição do jogador é: " + posicao);
-        }
+    public void mover(int valor){
+            this.posicao = this.posicao + valor;
     }
 
-    public void comer(){
-
-    }
-
-    public void formarTorre(){
-    }
-    
     public int getPosicao() {
         return posicao;
+    }
+
+    public void setPosicao(int posicao){
+        this.posicao = posicao;
+    }
+
+    public int getSituacao(){
+        return situacao;
+    }
+
+    public void setSituacao(int situacao) {
+        this.situacao = situacao;
     }
 
     public boolean isFora() {
