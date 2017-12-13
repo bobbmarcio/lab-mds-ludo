@@ -7,7 +7,9 @@ public class Builder {
         return new Jogador(nome, peca);
     }
 
-    public static Jogo build_jogo(List<Jogador> jogadores){
-        return new Jogo(jogadores);
+    public static Jogo build_jogo(List<Jogador> jogadores, Tabuleiro tabuleiro){
+        return new Jogo(jogadores, tabuleiro);
     }
+
+
 }
